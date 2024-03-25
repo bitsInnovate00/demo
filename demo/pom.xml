@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>demo</artifactId>
+    <version>3.0</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <camel.version>4.3.0</camel.version>
+    </properties>
+
+    <distributionManagement>
+        <snapshotRepository>
+          <id>camel-k-maven-repository-manager</id>
+          <url>http://127.0.0.1:41505/repository/nexus-hosted-repo/</url>
+        </snapshotRepository>
+        <repository>
+          <id>camel-k-maven-repository-manager</id>
+          <url>http://127.0.0.1:41505/repository/nexus-hosted-repo/</url>
+        </repository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+    </dependencies>
+</project>
